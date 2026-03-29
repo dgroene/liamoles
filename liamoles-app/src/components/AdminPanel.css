@@ -1,0 +1,147 @@
+.admin-trigger {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: rgba(30, 27, 75, 0.9);
+  border: 1px solid #334155;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+  z-index: 50;
+}
+
+.admin-trigger:hover {
+  opacity: 1;
+}
+
+.admin-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 150;
+  padding: 1rem;
+}
+
+.admin-box {
+  background: linear-gradient(135deg, #1e1b4b, #312e81);
+  border: 2px solid var(--accent);
+  border-radius: 1.2rem;
+  padding: 1.8rem;
+  max-width: 300px;
+  width: 100%;
+}
+
+.admin-title {
+  font-family: 'Bangers', cursive;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.admin-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.admin-input {
+  background: #12104a;
+  border: 1px solid #334155;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  color: var(--text);
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+  outline: none;
+  width: 100%;
+}
+
+.admin-input:focus {
+  border-color: var(--accent);
+}
+
+.admin-input-error {
+  border-color: var(--red) !important;
+}
+
+.admin-error {
+  color: var(--red);
+  font-size: 0.82rem;
+}
+
+.admin-flash {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.admin-btn-row {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.admin-btn {
+  flex: 1;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem;
+  font-weight: 800;
+  font-size: 1rem;
+  transition: filter 0.2s;
+  color: #fff;
+}
+
+.admin-btn-add {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+}
+
+.admin-btn-sub {
+  background: linear-gradient(135deg, #b91c1c, #ef4444);
+}
+
+.admin-btn:hover:not(:disabled) {
+  filter: brightness(1.15);
+}
+
+.admin-btn:disabled {
+  opacity: 0.6;
+}
+
+.admin-flash-red {
+  color: var(--red) !important;
+}
+
+.admin-close {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  background: transparent;
+  border: 1px solid #334155;
+  border-radius: 2rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 0.4rem;
+}
+
+.admin-close:hover {
+  border-color: var(--text-muted);
+  color: var(--text);
+}

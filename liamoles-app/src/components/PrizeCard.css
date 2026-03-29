@@ -1,0 +1,135 @@
+.prize-card {
+  background: var(--card-bg);
+  border-radius: 1.2rem;
+  border: 2px solid transparent;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s;
+  position: relative;
+}
+
+.prize-card.affordable {
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
+}
+
+.prize-card.locked {
+  border-color: #334155;
+  opacity: 0.75;
+}
+
+.prize-img-wrap {
+  position: relative;
+  background: #12104a;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prize-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.prize-card.affordable:hover .prize-img {
+  transform: scale(1.05);
+}
+
+.prize-lock-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.prize-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.prize-name {
+  font-weight: 800;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.prize-link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.prize-link:hover {
+  color: var(--gold);
+}
+
+.prize-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.prize-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.prize-cost {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.cost-coin {
+  font-size: 1.1rem;
+}
+
+.cost-num {
+  font-family: 'Bangers', cursive;
+  font-size: 1.5rem;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.cost-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.buy-btn {
+  padding: 0.45rem 1rem;
+  border-radius: 2rem;
+  border: none;
+  font-weight: 800;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.buy-btn-active {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff;
+}
+
+.buy-btn-active:hover {
+  filter: brightness(1.15);
+}
+
+.buy-btn-disabled {
+  background: #334155;
+  color: var(--text-muted);
+  cursor: not-allowed;
+}

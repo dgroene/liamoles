@@ -1,0 +1,46 @@
+.balance-wrap {
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+  border-radius: 1.5rem;
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.3), inset 0 0 30px rgba(124, 58, 237, 0.2);
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.balance-label {
+  font-family: 'Bangers', cursive;
+  font-size: 1.4rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.balance-value {
+  font-family: 'Bangers', cursive;
+  font-size: 5rem;
+  line-height: 1.1;
+  color: #fff;
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 3px 3px 0 var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.balance-coin {
+  font-size: 4rem;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+}
+
+.balance-loading {
+  color: var(--text-muted);
+  font-size: 3rem;
+}
+
+.balance-sub {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
