@@ -8,7 +8,7 @@ const prizes = [
     name: 'Steam Deck OLED',
     cost: 3000,
     description: 'The ultimate handheld gaming PC.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Steam_Deck_-_The_Verge.jpg/640px-Steam_Deck_-_The_Verge.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Steam_Deck_-_The_Verge.jpg/400px-Steam_Deck_-_The_Verge.jpg',
     link: 'https://www.steamdeck.com',
   },
   {
@@ -16,7 +16,7 @@ const prizes = [
     name: 'Meta Quest 3S',
     cost: 2800,
     description: 'Mixed-reality VR headset — dive into other worlds.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Meta_Quest_3S_transparent.png/640px-Meta_Quest_3S_transparent.png',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Meta_Quest_3_front_View.jpg/400px-Meta_Quest_3_front_View.jpg',
     link: 'https://www.meta.com/quest/quest-3s/',
   },
   {
@@ -24,7 +24,7 @@ const prizes = [
     name: 'AirPods (4th Gen)',
     cost: 1600,
     description: 'Wireless earbuds — great sound, no wires.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/AirPods_transparent.png/480px-AirPods_transparent.png',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/AirPods_%28cropped%29.jpg/400px-AirPods_%28cropped%29.jpg',
     link: 'https://www.apple.com/airpods/',
   },
   {
@@ -32,7 +32,7 @@ const prizes = [
     name: 'Kindle Paperwhite',
     cost: 950,
     description: 'Reads like paper, holds thousands of books.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Amazon_Kindle_Paperwhite_%28Amazon%29.jpg/480px-Amazon_Kindle_Paperwhite_%28Amazon%29.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Amazon_Kindle_Paperwhite_%28Amazon%29.jpg/400px-Amazon_Kindle_Paperwhite_%28Amazon%29.jpg',
     link: 'https://www.amazon.com/kindle-paperwhite',
   },
   {
@@ -40,7 +40,7 @@ const prizes = [
     name: 'PS5 DualSense Controller',
     cost: 720,
     description: 'Feel the game with haptic feedback.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/DualSense_controller.jpg/480px-DualSense_controller.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/DualSense_controller.jpg/400px-DualSense_controller.jpg',
     link: 'https://www.playstation.com/accessories/dualsense-wireless-controller/',
   },
   {
@@ -48,7 +48,7 @@ const prizes = [
     name: 'Pokémon TCG Booster Box',
     cost: 1100,
     description: '36 packs of Pokémon cards — chase those rare holos!',
-    image: 'https://upload.wikimedia.org/wikipedia/en/thumb/2/22/Pokemon_Trading_Card_Game_cardbacks.jpg/480px-Pokemon_Trading_Card_Game_cardbacks.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Pok%C3%A9mon_sealed_collection.jpg/400px-Pok%C3%A9mon_sealed_collection.jpg',
     link: 'https://www.pokemon.com/us/pokemon-tcg/',
   },
   {
@@ -56,7 +56,7 @@ const prizes = [
     name: 'Nintendo Switch Game',
     cost: 650,
     description: 'Any new Nintendo Switch title of your choice.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Nintendo-Switch-wJoyCons-L-R-BlueRed-Standing-FL.jpg/480px-Nintendo-Switch-wJoyCons-L-R-BlueRed-Standing-FL.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Nintendo-Switch-wJoyCons-L-R-BlueRed-Standing-FL.jpg/400px-Nintendo-Switch-wJoyCons-L-R-BlueRed-Standing-FL.jpg',
     link: 'https://www.nintendo.com/us/store/games/nintendo-switch-games/',
   },
   {
@@ -64,7 +64,7 @@ const prizes = [
     name: 'JBL Flip 6 Speaker',
     cost: 560,
     description: 'Loud, waterproof Bluetooth speaker.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/JBL_Flip_Essential_-_2019_%2848796795832%29.jpg/480px-JBL_Flip_Essential_-_2019_%2848796795832%29.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/JBL_Flip_Essential_-_2019_%2848796795832%29.jpg/400px-JBL_Flip_Essential_-_2019_%2848796795832%29.jpg',
     link: 'https://www.jbl.com/bluetooth-speakers/FLIP6.html',
   },
   {
@@ -72,7 +72,7 @@ const prizes = [
     name: 'LEGO Technic Set',
     cost: 480,
     description: 'A gnarly LEGO Technic build — gears, motors, and mayhem.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/480px-LEGO_logo.svg.png',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/LEGO_Technic_John_Deere_6130R.jpg/400px-LEGO_Technic_John_Deere_6130R.jpg',
     link: 'https://www.lego.com/en-us/themes/technic',
   },
   {
@@ -80,7 +80,7 @@ const prizes = [
     name: 'Razer DeathAdder Mouse',
     cost: 420,
     description: 'Precise, programmable gaming mouse with RGB.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Razer_logo.svg/480px-Razer_logo.svg.png',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Razer_DeathAdder_Elite-front_oblique-ar_16to10-fs_PNr%C2%B00465.jpg/400px-Razer_DeathAdder_Elite-front_oblique-ar_16to10-fs_PNr%C2%B00465.jpg',
     link: 'https://www.razer.com/gaming-mice/razer-deathadder-v3',
   },
   {
@@ -104,7 +104,7 @@ const prizes = [
     name: 'Nerf Ultra Blaster',
     cost: 350,
     description: 'Fire foam darts across the entire living room.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Nerf_N-Strike_Elite_Rampage_Blaster_%28Hasbro%29.jpg/480px-Nerf_N-Strike_Elite_Rampage_Blaster_%28Hasbro%29.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Nerf_N-Strike_Elite_Rampage_Blaster_%28Hasbro%29.jpg/400px-Nerf_N-Strike_Elite_Rampage_Blaster_%28Hasbro%29.jpg',
     link: 'https://www.hasbro.com/en-us/brand/nerf',
   },
   {
@@ -112,7 +112,7 @@ const prizes = [
     name: 'Holy Stone Mini Drone',
     cost: 550,
     description: 'Fly it indoors or out — comes with a camera.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/DJI_Phantom_3_Professional.jpg/480px-DJI_Phantom_3_Professional.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/DJI_Phantom_2_Vision_Plus_%2814353376853%29.jpg/400px-DJI_Phantom_2_Vision_Plus_%2814353376853%29.jpg',
     link: 'https://www.holystone.com',
   },
   {
@@ -120,7 +120,7 @@ const prizes = [
     name: 'Steam $20 Gift Card',
     cost: 220,
     description: 'Spend it on any game in the Steam store.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/480px-Steam_icon_logo.svg.png',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Steam_Deck_%28front%29.jpg/400px-Steam_Deck_%28front%29.jpg',
     link: 'https://store.steampowered.com/digitalgiftcards/',
   },
   {
@@ -128,7 +128,7 @@ const prizes = [
     name: 'Roblox $25 Gift Card',
     cost: 200,
     description: '2000 Robux — big bargain!',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Roblox_2022_Logo.svg/480px-Roblox_2022_Logo.svg.png',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Roblox_gift_cards.jpg/400px-Roblox_gift_cards.jpg',
     link: 'https://www.roblox.com/giftcards',
   },
   {
@@ -136,7 +136,7 @@ const prizes = [
     name: 'Movie Theater Trip',
     cost: 200,
     description: 'Pick a movie, invite a friend — popcorn included.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Movie_Clapper_Loader_2_%28Pixabay%29.jpg/480px-Movie_Clapper_Loader_2_%28Pixabay%29.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Gol%C3%A9ador_-_Sala_de_cine_en_3D.jpg/400px-Gol%C3%A9ador_-_Sala_de_cine_en_3D.jpg',
     link: null,
   },
   {
@@ -144,7 +144,7 @@ const prizes = [
     name: 'Amazon $25 Gift Card',
     cost: 280,
     description: 'Buy almost anything — slight dad tax applied.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/480px-Amazon_logo.svg.png',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Amazon.de_gift_card%2C_Ommoord%2C_Rotterdam_%282021%29.jpg/400px-Amazon.de_gift_card%2C_Ommoord%2C_Rotterdam_%282021%29.jpg',
     link: 'https://www.amazon.com/gift-cards',
   },
   {
@@ -152,7 +152,7 @@ const prizes = [
     name: '3 Months of Netflix',
     cost: 480,
     description: 'Stream all the shows and movies you want.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/480px-Netflix_2015_logo.svg.png',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Netflix_Los_Angeles_office.jpg/400px-Netflix_Los_Angeles_office.jpg',
     link: 'https://www.netflix.com',
   },
   {
@@ -160,7 +160,7 @@ const prizes = [
     name: 'Ice Cream Sundae Party',
     cost: 80,
     description: 'Build-your-own sundae night with toppings galore. Steal of the century!',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ice_cream_social_event.jpg/480px-Ice_cream_social_event.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ice_Cream_dessert_02.jpg/400px-Ice_Cream_dessert_02.jpg',
     link: null,
   },
 ];
