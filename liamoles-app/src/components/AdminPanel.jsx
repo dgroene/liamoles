@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './AdminPanel.css';
 
-const ADMIN_PIN = '1234'; // Change this before deploying!
+const ADMIN_PIN = '9990'; // Change this before deploying!
 
 export default function AdminPanel({ onAdd, onSubtract }) {
   const [open, setOpen] = useState(false);

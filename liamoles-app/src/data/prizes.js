@@ -8,7 +8,7 @@ const prizes = [
     name: 'Steam Deck OLED',
     cost: 3000,
     description: 'The ultimate handheld gaming PC.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Steam_Deck_-_The_Verge.jpg/400px-Steam_Deck_-_The_Verge.jpg',
+    image: 'https://cdn.akamai.steamstatic.com/steamdeck/images/oled/oled_hands.png',
     link: 'https://www.steamdeck.com',
   },
   {
@@ -32,7 +32,7 @@ const prizes = [
     name: 'Kindle Paperwhite',
     cost: 950,
     description: 'Reads like paper, holds thousands of books.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Amazon_Kindle_Paperwhite_%28Amazon%29.jpg/400px-Amazon_Kindle_Paperwhite_%28Amazon%29.jpg',
+    image: 'https://m.media-amazon.com/images/I/71YwNBmu+aL._AC_SY879_.jpg',
     link: 'https://www.amazon.com/kindle-paperwhite',
   },
   {
@@ -40,7 +40,7 @@ const prizes = [
     name: 'PS5 DualSense Controller',
     cost: 720,
     description: 'Feel the game with haptic feedback.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/DualSense_controller.jpg/400px-DualSense_controller.jpg',
+    image: 'https://media.direct.playstation.com/is/image/sierialto/DualSense-Gravity-Blue-Hero-1-front-facing',
     link: 'https://www.playstation.com/accessories/dualsense-wireless-controller/',
   },
   {
@@ -56,7 +56,7 @@ const prizes = [
     name: 'Nintendo Switch Game',
     cost: 650,
     description: 'Any new Nintendo Switch title of your choice.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Nintendo-Switch-wJoyCons-L-R-BlueRed-Standing-FL.jpg/400px-Nintendo-Switch-wJoyCons-L-R-BlueRed-Standing-FL.jpg',
+    image: 'https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/store/software/switch2/70010000114614/9a5d800cc991652c1e051b844c11a86cf8b9bc061cdaf035ad44be1ea461e471',
     link: 'https://www.nintendo.com/us/store/games/nintendo-switch-games/',
   },
   {
