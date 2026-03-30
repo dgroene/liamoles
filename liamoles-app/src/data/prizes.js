@@ -84,12 +84,12 @@ const prizes = [
     link: 'https://www.razer.com/gaming-mice/razer-deathadder-v3',
   },
   {
-    id: 'minecraft',
-    name: 'Minecraft Java + Bedrock Edition',
-    cost: 320,
-    description: 'Build anything. Survive everything.',
-    image: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Minecraft_cover.png/400px-Minecraft_cover.png',
-    link: 'https://www.minecraft.net',
+    id: 'ihop-breakfast',
+    name: 'Breakfast at IHOP',
+    cost: 220,
+    description: 'YUMMMM. Pancakes!',
+    image: 'https://www.ihop.com/-/media/ihop/marketing/pages/home/modules---primary/web-tile-1---bottomless.jpg',
+    link: 'https://www.ihop.com',
   },
   {
     id: 'extra-hour-video-games',
@@ -104,7 +104,7 @@ const prizes = [
     name: 'Nerf Ultra Blaster',
     cost: 350,
     description: 'Fire foam darts across the entire living room.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Nerf_N-Strike_Elite_Rampage_Blaster_%28Hasbro%29.jpg/400px-Nerf_N-Strike_Elite_Rampage_Blaster_%28Hasbro%29.jpg',
+    image: 'https://i5.walmartimages.com/seo/Nerf-Ultra-Three-Blaster-Pump-Action-8-Dart-Clip-8-Nerf-Ultra-Darts_bf78f121-8c77-4b77-89df-7684b4df84b0.2e233bd05ef81b8fc599e3ff74ca933b.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF',
     link: 'https://www.hasbro.com/en-us/brand/nerf',
   },
   {
@@ -136,7 +136,7 @@ const prizes = [
     name: 'Movie Theater Trip',
     cost: 200,
     description: 'Pick a movie, invite a friend — popcorn included.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Gol%C3%A9ador_-_Sala_de_cine_en_3D.jpg/400px-Gol%C3%A9ador_-_Sala_de_cine_en_3D.jpg',
+    image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstudybreaks.com%2Fwp-content%2Fuploads%2F2017%2F06%2F41-majesticbrookfield-exteriorjpg.jpg&f=1&nofb=1&ipt=e1df4ffdafc979d9d553d15261fff4604deb793f89891ca93684012c3641ad3d',
     link: null,
   },
   {
