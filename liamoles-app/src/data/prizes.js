@@ -92,12 +92,12 @@ const prizes = [
     link: 'https://www.minecraft.net',
   },
   {
-    id: 'exploding-kittens',
-    name: 'Exploding Kittens + Expansion',
-    cost: 300,
-    description: 'The card game that ruined friendships (in the best way).',
-    image: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b3/Exploding_Kittens_card_game_box.jpg/400px-Exploding_Kittens_card_game_box.jpg',
-    link: 'https://www.explodingkittens.com',
+    id: 'extra-hour-video-games',
+    name: 'One Extra Hour of Video Games',
+    cost: 100,
+    description: 'One extra hour of melting your mind with games.',
+    image: 'https://domf5oio6qrcr.cloudfront.net/medialibrary/10378/GettyImages-1190641105.jpg',
+    link: 'https://www.health.harvard.edu/blog/the-health-effects-of-too-much-gaming-2020122221645',
   },
   {
     id: 'nerf-ultra',
