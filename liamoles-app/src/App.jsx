@@ -39,7 +39,7 @@ export default function App() {
     setConfirming(null);
     setCelebrating(prize);
     try {
-      const newBalance = await subtractLiamoles(prize.cost);
+      const newBalance = await subtractLiamoles(prize.cost, prize.name);
       setBalance(newBalance);
     } catch (err) {
       if (err.message === 'insufficient') {

@@ -21,11 +21,11 @@ export async function addLiamoles(amount) {
   return data.amount;
 }
 
-export async function subtractLiamoles(amount) {
+export async function subtractLiamoles(amount, prizeName = '') {
   const res = await fetch(ENDPOINT, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ action: 'subtract', amount }),
+    body: JSON.stringify({ action: 'subtract', amount, prizeName }),
   });
   if (res.status === 409) throw new Error('insufficient');
   if (!res.ok) throw new Error('Failed to subtract liamoles');

@@ -20,3 +20,4 @@ liamoles-backend/lib/*.js
 .DS_Store
 *.log
 *.idea
+.playwright-mcp/

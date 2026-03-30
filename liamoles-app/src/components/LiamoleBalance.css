@@ -19,14 +19,13 @@
 
 .balance-value {
   font-family: 'Bangers', cursive;
-  font-size: 5rem;
+  font-size: 7rem;
   line-height: 1.1;
   color: #fff;
   text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 3px 3px 0 var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.3rem;
 }
 
 .balance-coin {

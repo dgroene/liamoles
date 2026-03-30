@@ -1,10 +1,13 @@
 const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const { DynamoDBDocumentClient, GetCommand, UpdateCommand } = require('@aws-sdk/lib-dynamodb');
+const { SNSClient, PublishCommand } = require('@aws-sdk/client-sns');
 
 const client = new DynamoDBClient({});
 const ddb = DynamoDBDocumentClient.from(client);
+const sns = new SNSClient({});
 const TABLE = process.env.TABLE_NAME;
 const PK = 'balance';
+const NOTIFICATION_PHONE = process.env.NOTIFICATION_PHONE || '';
 
 const headers = {
   'Access-Control-Allow-Origin': '*',
@@ -29,7 +32,7 @@ exports.handler = async (event) => {
       return { statusCode: 400, headers, body: JSON.stringify({ error: 'Invalid JSON' }) };
     }
 
-    const { action, amount } = body;
+    const { action, amount, prizeName } = body;
     if (!action || typeof amount !== 'number' || amount <= 0) {
       return {
         statusCode: 400,
@@ -59,7 +62,19 @@ exports.handler = async (event) => {
           ExpressionAttributeValues: { ':val': amount },
           ReturnValues: 'UPDATED_NEW',
         }));
-        return { statusCode: 200, headers, body: JSON.stringify({ amount: Number(result.Attributes.amount) }) };
+        const newBal = Number(result.Attributes.amount);
+        if (NOTIFICATION_PHONE) {
+          try {
+            const name = typeof prizeName === 'string' && prizeName ? prizeName : null;
+            const msg = name
+              ? `Liam just redeemed: ${name} for ${amount} liamoles. Remaining balance: ${newBal}.`
+              : `Liam just spent ${amount} liamoles. Remaining balance: ${newBal}.`;
+            await sns.send(new PublishCommand({ PhoneNumber: NOTIFICATION_PHONE, Message: msg }));
+          } catch (snsErr) {
+            console.error('SNS notification failed (non-fatal):', snsErr);
+          }
+        }
+        return { statusCode: 200, headers, body: JSON.stringify({ amount: newBal }) };
       } catch (err) {
         if (err.name === 'ConditionalCheckFailedException') {
           return { statusCode: 409, headers, body: JSON.stringify({ error: 'Insufficient liamoles' }) };

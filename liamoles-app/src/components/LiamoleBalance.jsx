@@ -21,10 +21,7 @@ export default function LiamoleBalance({ balance, loading }) {
         {loading ? (
           <span className="balance-loading">…</span>
         ) : (
-          <>
-            <span className="balance-coin">🪙</span>
-            <AnimatedNumber value={balance} />
-          </>
+          <AnimatedNumber value={balance} />
         )}
       </div>
       <div className="balance-sub">Spend them on awesome stuff below</div>

@@ -3,6 +3,7 @@ import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as apigateway from 'aws-cdk-lib/aws-apigateway';
 import * as cr from 'aws-cdk-lib/custom-resources';
+import * as iam from 'aws-cdk-lib/aws-iam';
 import { Construct } from 'constructs';
 import * as path from 'path';
 
@@ -25,11 +26,16 @@ export class LiamolesStack extends cdk.Stack {
       code: lambda.Code.fromAsset(path.join(__dirname, '../lambda')),
       environment: {
         TABLE_NAME: table.tableName,
+        NOTIFICATION_PHONE: process.env.NOTIFICATION_PHONE ?? '',
       },
       timeout: cdk.Duration.seconds(10),
     });
 
     table.grantReadWriteData(fn);
+    fn.addToRolePolicy(new iam.PolicyStatement({
+      actions: ['sns:Publish'],
+      resources: ['*'],
+    }));
 
     // Seed the initial balance via a custom resource (runs once on deploy)
     const seedProvider = new cr.AwsCustomResource(this, 'SeedBalance', {
