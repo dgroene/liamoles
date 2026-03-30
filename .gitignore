@@ -4,6 +4,7 @@
 
 # Dependencies
 node_modules/
+liamoles-backend/lambda/node_modules/
 
 # Build output
 dist/
