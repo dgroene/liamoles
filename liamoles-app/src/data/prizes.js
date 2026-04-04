@@ -163,6 +163,30 @@ const prizes = [
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ice_Cream_dessert_02.jpg/400px-Ice_Cream_dessert_02.jpg',
     link: null,
   },
+  {
+    id: 'gaming-chair',
+    name: 'Gaming Chair',
+    cost: 2000,
+    description: 'Park your butt in this amazing chair and Factorio in luxury!',
+    image: 'https://gtracing.com/cdn/shop/files/GTP610-PINK_3.webp',
+    link: 'https://gtracing.com/collections/gaming-chairs-1',
+  },
+  {
+    id: 'tic-tacs',
+    name: 'Tic Tacs',
+    cost: 25,
+    description: 'The yummiest known way to freshen your breath!',
+    image: 'https://target.scene7.com/is/image/Target/GUEST_736da8b8-934b-434a-9386-187da48d0047?wid=750&qlt=80',
+    link: 'https://www.tictac.com/us/en/',
+  },
+  {
+    id: 'get-out-of-hail-free',
+    name: 'One Get Out of Jail Free Card',
+    cost: 30,
+    description: 'Card entitles you to reverse all punishment. Single Use.',
+    image: 'https://static.wikia.nocookie.net/monopoly/images/c/c9/Get_out_of_jail_free.gif/revision/latest?cb=20060925185102',
+    link: null,
+  },
 ];
 
 export default prizes;

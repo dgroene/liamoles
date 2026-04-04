@@ -1,13 +1,14 @@
 const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const { DynamoDBDocumentClient, GetCommand, UpdateCommand } = require('@aws-sdk/lib-dynamodb');
-const { SNSClient, PublishCommand } = require('@aws-sdk/client-sns');
+const { SESClient, SendEmailCommand } = require('@aws-sdk/client-ses');
 
 const client = new DynamoDBClient({});
 const ddb = DynamoDBDocumentClient.from(client);
-const sns = new SNSClient({});
+const ses = new SESClient({});
 const TABLE = process.env.TABLE_NAME;
 const PK = 'balance';
-const NOTIFICATION_PHONE = process.env.NOTIFICATION_PHONE || '';
+const NOTIFICATION_TO = (process.env.NOTIFICATION_TO || '').trim();
+const NOTIFICATION_FROM = (process.env.NOTIFICATION_FROM || '').trim();
 
 const headers = {
   'Access-Control-Allow-Origin': '*',
@@ -63,15 +64,22 @@ exports.handler = async (event) => {
           ReturnValues: 'UPDATED_NEW',
         }));
         const newBal = Number(result.Attributes.amount);
-        if (NOTIFICATION_PHONE) {
+        if (NOTIFICATION_TO && NOTIFICATION_FROM) {
           try {
             const name = typeof prizeName === 'string' && prizeName ? prizeName : null;
             const msg = name
               ? `Liam just redeemed: ${name} for ${amount} liamoles. Remaining balance: ${newBal}.`
               : `Liam just spent ${amount} liamoles. Remaining balance: ${newBal}.`;
-            await sns.send(new PublishCommand({ PhoneNumber: NOTIFICATION_PHONE, Message: msg }));
-          } catch (snsErr) {
-            console.error('SNS notification failed (non-fatal):', snsErr);
+            await ses.send(new SendEmailCommand({
+              Source: NOTIFICATION_FROM,
+              Destination: { ToAddresses: [NOTIFICATION_TO] },
+              Message: {
+                Subject: { Data: '🪙 Liam redeemed liamoles!' },
+                Body: { Text: { Data: msg } },
+              },
+            }));
+          } catch (sesErr) {
+            console.error('SES notification failed (non-fatal):', sesErr);
           }
         }
         return { statusCode: 200, headers, body: JSON.stringify({ amount: newBal }) };

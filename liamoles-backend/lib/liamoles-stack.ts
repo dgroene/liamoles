@@ -26,14 +26,15 @@ export class LiamolesStack extends cdk.Stack {
       code: lambda.Code.fromAsset(path.join(__dirname, '../lambda')),
       environment: {
         TABLE_NAME: table.tableName,
-        NOTIFICATION_PHONE: process.env.NOTIFICATION_PHONE ?? '',
+        NOTIFICATION_TO: process.env.NOTIFICATION_TO ?? '',
+        NOTIFICATION_FROM: process.env.NOTIFICATION_FROM ?? '',
       },
       timeout: cdk.Duration.seconds(10),
     });
 
     table.grantReadWriteData(fn);
     fn.addToRolePolicy(new iam.PolicyStatement({
-      actions: ['sns:Publish'],
+      actions: ['ses:SendEmail'],
       resources: ['*'],
     }));
 
