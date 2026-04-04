@@ -180,11 +180,19 @@ const prizes = [
     link: 'https://www.tictac.com/us/en/',
   },
   {
-    id: 'get-out-of-hail-free',
+    id: 'get-out-of-jail-free',
     name: 'One Get Out of Jail Free Card',
     cost: 30,
-    description: 'Card entitles you to reverse all punishment. Single Use.',
-    image: 'https://static.wikia.nocookie.net/monopoly/images/c/c9/Get_out_of_jail_free.gif/revision/latest?cb=20060925185102',
+    description: 'Card entitles you to reverse up to 40 Liamoles of  punishment. Single Use.',
+    image: 'https://www.monopolyland.com/wp-content/uploads/Get-out-of-Jail-Free-card-in-hand-1.jpg',
+    link: null,
+  },
+  {
+    id: 'free-boop',
+    name: 'One free stomach boop',
+    cost: 30,
+    description: 'Pillsbury dough-boy laugh included. Single Use.',
+    image: 'https://i.pinimg.com/originals/03/8c/9d/038c9d55f805c0ac5ee0103edb3a80fa.gif',
     link: null,
   },
 ];
