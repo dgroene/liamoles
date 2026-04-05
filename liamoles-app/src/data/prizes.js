@@ -1,6 +1,8 @@
 // Exchange rate ~10 cents per liamole.
 // Steam Deck = 3000 liamoles ($299). Some items are bargains, some are ripoffs.
 // Images link to Wikimedia Commons or stable official/press-kit sources.
+// saleHolidays: array of holiday IDs when this prize is discounted.
+// salePercent: discount percentage (10–50) applied on sale days.
 
 const prizes = [
   {
@@ -10,6 +12,8 @@ const prizes = [
     description: 'The ultimate handheld gaming PC.',
     image: 'https://cdn.akamai.steamstatic.com/steamdeck/images/oled/oled_hands.png',
     link: 'https://www.steamdeck.com',
+    saleHolidays: ['new-years-day', 'black-friday'],
+    salePercent: 15,
   },
   {
     id: 'meta-quest-3s',
@@ -18,6 +22,8 @@ const prizes = [
     description: 'Mixed-reality VR headset — dive into other worlds.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Meta_Quest_3_front_View.jpg/400px-Meta_Quest_3_front_View.jpg',
     link: 'https://www.meta.com/quest/quest-3s/',
+    saleHolidays: ['black-friday'],
+    salePercent: 20,
   },
   {
     id: 'airpods',
@@ -26,6 +32,8 @@ const prizes = [
     description: 'Wireless earbuds — great sound, no wires.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/AirPods_%28cropped%29.jpg/400px-AirPods_%28cropped%29.jpg',
     link: 'https://www.apple.com/airpods/',
+    saleHolidays: ['christmas'],
+    salePercent: 25,
   },
   {
     id: 'kindle',
@@ -34,6 +42,8 @@ const prizes = [
     description: 'Reads like paper, holds thousands of books.',
     image: 'https://m.media-amazon.com/images/I/71YwNBmu+aL._AC_SY879_.jpg',
     link: 'https://www.amazon.com/kindle-paperwhite',
+    saleHolidays: ['columbus-day'],
+    salePercent: 30,
   },
   {
     id: 'ps5-controller',
@@ -42,6 +52,8 @@ const prizes = [
     description: 'Feel the game with haptic feedback.',
     image: 'https://media.direct.playstation.com/is/image/sierialto/DualSense-Gravity-Blue-Hero-1-front-facing',
     link: 'https://www.playstation.com/accessories/dualsense-wireless-controller/',
+    saleHolidays: ['veterans-day'],
+    salePercent: 20,
   },
   {
     id: 'pokemon-box',
@@ -50,6 +62,8 @@ const prizes = [
     description: '36 packs of Pokémon cards — chase those rare holos!',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Pok%C3%A9mon_sealed_collection.jpg/400px-Pok%C3%A9mon_sealed_collection.jpg',
     link: 'https://www.pokemon.com/us/pokemon-tcg/',
+    saleHolidays: ['christmas'],
+    salePercent: 15,
   },
   {
     id: 'switch-game',
@@ -58,6 +72,8 @@ const prizes = [
     description: 'Any new Nintendo Switch title of your choice.',
     image: 'https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/store/software/switch2/70010000114614/9a5d800cc991652c1e051b844c11a86cf8b9bc061cdaf035ad44be1ea461e471',
     link: 'https://www.nintendo.com/us/store/games/nintendo-switch-games/',
+    saleHolidays: ['presidents-day'],
+    salePercent: 25,
   },
   {
     id: 'front-seat-privileges',
@@ -66,6 +82,8 @@ const prizes = [
     description: 'Sit in the front seat, guaranteed.',
     image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.slashgear.com%2Fimg%2Fgallery%2Fwhy-is-the-front-passenger-seat-in-a-car-called-shotgun%2Fl-intro-1744750479.jpg&f=1&nofb=1&ipt=cc347d4f202780b3f444cd65279600345dfbfb5ff2fa67869c533cdc7d6dc031',
     link: null,
+    saleHolidays: ['veterans-day'],
+    salePercent: 40,
   },
   {
     id: 'lego-technic',
@@ -74,6 +92,8 @@ const prizes = [
     description: 'A gnarly LEGO Technic build — gears, motors, and mayhem.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/LEGO_Technic_John_Deere_6130R.jpg/400px-LEGO_Technic_John_Deere_6130R.jpg',
     link: 'https://www.lego.com/en-us/themes/technic',
+    saleHolidays: ['presidents-day'],
+    salePercent: 20,
   },
   {
     id: 'gaming-mouse',
@@ -82,6 +102,8 @@ const prizes = [
     description: 'Precise, programmable gaming mouse with RGB.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Razer_DeathAdder_Elite-front_oblique-ar_16to10-fs_PNr%C2%B00465.jpg/400px-Razer_DeathAdder_Elite-front_oblique-ar_16to10-fs_PNr%C2%B00465.jpg',
     link: 'https://www.razer.com/gaming-mice/razer-deathadder-v3',
+    saleHolidays: ['labor-day'],
+    salePercent: 30,
   },
   {
     id: 'ihop-breakfast',
@@ -90,6 +112,8 @@ const prizes = [
     description: 'YUMMMM. Pancakes!',
     image: 'https://www.ihop.com/-/media/ihop/marketing/pages/home/modules---primary/web-tile-1---bottomless.jpg',
     link: 'https://www.ihop.com',
+    saleHolidays: ['memorial-day', 'thanksgiving'],
+    salePercent: 25,
   },
   {
     id: 'extra-hour-video-games',
@@ -98,6 +122,8 @@ const prizes = [
     description: 'One extra hour of melting your mind with games.',
     image: 'https://domf5oio6qrcr.cloudfront.net/medialibrary/10378/GettyImages-1190641105.jpg',
     link: 'https://www.health.harvard.edu/blog/the-health-effects-of-too-much-gaming-2020122221645',
+    saleHolidays: ['labor-day'],
+    salePercent: 50,
   },
   {
     id: 'nerf-ultra',
@@ -106,6 +132,8 @@ const prizes = [
     description: 'Fire foam darts across the entire living room.',
     image: 'https://i5.walmartimages.com/seo/Nerf-Ultra-Three-Blaster-Pump-Action-8-Dart-Clip-8-Nerf-Ultra-Darts_bf78f121-8c77-4b77-89df-7684b4df84b0.2e233bd05ef81b8fc599e3ff74ca933b.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF',
     link: 'https://www.hasbro.com/en-us/brand/nerf',
+    saleHolidays: ['memorial-day', 'independence-day'],
+    salePercent: 20,
   },
   {
     id: 'drone',
@@ -114,6 +142,8 @@ const prizes = [
     description: 'Fly it indoors or out — comes with a camera.',
     image: 'https://static.holystone.com/Uploads/Picture/2026-03-23/69c0b66a59847.jpg!webp',
     link: 'https://www.holystone.com',
+    saleHolidays: ['columbus-day'],
+    salePercent: 15,
   },
   {
     id: 'steam-gift',
@@ -122,6 +152,8 @@ const prizes = [
     description: 'Spend it on any game in the Steam store.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Steam_Deck_%28front%29.jpg/400px-Steam_Deck_%28front%29.jpg',
     link: 'https://store.steampowered.com/digitalgiftcards/',
+    saleHolidays: ['independence-day'],
+    salePercent: 30,
   },
   {
     id: 'roblox-gift',
@@ -130,6 +162,8 @@ const prizes = [
     description: '2000 Robux — big bargain!',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Roblox_gift_cards.jpg/400px-Roblox_gift_cards.jpg',
     link: 'https://www.roblox.com/giftcards',
+    saleHolidays: ['pi-day'],
+    salePercent: 35,
   },
   {
     id: 'movie-trip',
@@ -138,6 +172,8 @@ const prizes = [
     description: 'Pick a movie, invite a friend — popcorn included.',
     image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstudybreaks.com%2Fwp-content%2Fuploads%2F2017%2F06%2F41-majesticbrookfield-exteriorjpg.jpg&f=1&nofb=1&ipt=e1df4ffdafc979d9d553d15261fff4604deb793f89891ca93684012c3641ad3d',
     link: null,
+    saleHolidays: ['mlk-day', 'juneteenth'],
+    salePercent: 25,
   },
   {
     id: 'amazon-gift',
@@ -146,6 +182,8 @@ const prizes = [
     description: 'Buy almost anything — slight dad tax applied.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Amazon.de_gift_card%2C_Ommoord%2C_Rotterdam_%282021%29.jpg/400px-Amazon.de_gift_card%2C_Ommoord%2C_Rotterdam_%282021%29.jpg',
     link: 'https://www.amazon.com/gift-cards',
+    saleHolidays: ['mlk-day', 'juneteenth'],
+    salePercent: 20,
   },
   {
     id: 'flex_bedtime',
@@ -154,6 +192,8 @@ const prizes = [
     description: 'Up all night. Sleep all day.',
     image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.wE6zztdWFssPKixYNWa5dAHaE8%3Fpid%3DApi&f=1&ipt=792a6e372351a93b1e8b2d7a7468e4ae77711fa35d5b288a1fe817179b5b2b3d&ipo=images',
     link: null,
+    saleHolidays: ['thanksgiving'],
+    salePercent: 40,
   },
   {
     id: 'ice-cream',
@@ -162,6 +202,8 @@ const prizes = [
     description: 'Build-your-own sundae night with toppings galore. Steal of the century!',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ice_Cream_dessert_02.jpg/400px-Ice_Cream_dessert_02.jpg',
     link: null,
+    saleHolidays: ['easter'],
+    salePercent: 45,
   },
   {
     id: 'gaming-chair',
@@ -170,6 +212,8 @@ const prizes = [
     description: 'Park your butt in this amazing chair and Factorio in luxury!',
     image: 'https://gtracing.com/cdn/shop/files/GTP610-PINK_3.webp',
     link: 'https://gtracing.com/collections/gaming-chairs-1',
+    saleHolidays: ['new-years-day', 'christmas'],
+    salePercent: 15,
   },
   {
     id: 'tic-tacs',
@@ -178,6 +222,8 @@ const prizes = [
     description: 'The yummiest known way to freshen your breath!',
     image: 'https://target.scene7.com/is/image/Target/GUEST_736da8b8-934b-434a-9386-187da48d0047?wid=750&qlt=80',
     link: 'https://www.tictac.com/us/en/',
+    saleHolidays: ['pi-day'],
+    salePercent: 50,
   },
   {
     id: 'get-out-of-jail-free',
@@ -186,6 +232,8 @@ const prizes = [
     description: 'Card entitles you to reverse up to 40 Liamoles of  punishment. Single Use.',
     image: 'https://www.monopolyland.com/wp-content/uploads/Get-out-of-Jail-Free-card-in-hand-1.jpg',
     link: null,
+    saleHolidays: ['easter'],
+    salePercent: 30,
   },
   {
     id: 'free-boop',
@@ -194,6 +242,8 @@ const prizes = [
     description: 'Pillsbury dough-boy laugh included. Single Use.',
     image: 'https://i.pinimg.com/originals/03/8c/9d/038c9d55f805c0ac5ee0103edb3a80fa.gif',
     link: null,
+    saleHolidays: ['easter'],
+    salePercent: 40,
   },
 ];
 

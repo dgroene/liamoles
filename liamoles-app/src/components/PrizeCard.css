@@ -9,6 +9,26 @@
   position: relative;
 }
 
+.prize-card.on-sale {
+  border-color: #ef4444;
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.35);
+}
+
+.sale-tag {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: #ef4444;
+  color: #fff;
+  font-family: 'Bangers', cursive;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.55rem;
+  border-radius: 0.4rem;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
 .prize-card.affordable {
   border-color: var(--accent);
   box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
@@ -103,6 +123,23 @@
   font-size: 1.5rem;
   color: var(--gold);
   line-height: 1;
+}
+
+.cost-prices {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+
+.cost-original {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  font-size: 1.1rem;
+}
+
+.cost-sale {
+  color: #ef4444;
+  font-size: 1.5rem;
 }
 
 .cost-label {

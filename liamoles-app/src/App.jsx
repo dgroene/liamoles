@@ -5,7 +5,9 @@ import PrizeCard from './components/PrizeCard';
 import ConfirmModal from './components/ConfirmModal';
 import PurchaseAnimation from './components/PurchaseAnimation';
 import AdminPanel from './components/AdminPanel';
+import SaleBanner from './components/SaleBanner';
 import prizes from './data/prizes';
+import { getTodaysHoliday } from './data/holidays';
 import { fetchBalance, addLiamoles, subtractLiamoles } from './api/liamoles';
 import './App.css';
 
@@ -61,12 +63,21 @@ export default function App() {
     setBalance(newBalance);
   }
 
-  // Sort: affordable first, then by cost descending
+  const todaysHoliday = getTodaysHoliday();
+
+  function effectiveCost(prize) {
+    if (todaysHoliday && prize.saleHolidays?.includes(todaysHoliday.id)) {
+      return Math.round(prize.cost * (1 - prize.salePercent / 100));
+    }
+    return prize.cost;
+  }
+
+  // Sort: affordable first (using sale price when applicable), then by effective cost descending
   const sorted = [...prizes].sort((a, b) => {
-    const aAfford = balance >= a.cost ? 1 : 0;
-    const bAfford = balance >= b.cost ? 1 : 0;
+    const aAfford = balance >= effectiveCost(a) ? 1 : 0;
+    const bAfford = balance >= effectiveCost(b) ? 1 : 0;
     if (aAfford !== bAfford) return bAfford - aAfford;
-    return b.cost - a.cost;
+    return effectiveCost(b) - effectiveCost(a);
   });
 
   return (
@@ -78,6 +89,8 @@ export default function App() {
         {error && <div className="app-error">{error}</div>}
       </header>
 
+      <SaleBanner holiday={todaysHoliday} />
+
       <main className="prize-grid">
         {sorted.map((prize) => (
           <PrizeCard
@@ -85,6 +98,7 @@ export default function App() {
             prize={prize}
             balance={balance}
             onBuy={handleBuy}
+            todaysHoliday={todaysHoliday}
           />
         ))}
       </main>
