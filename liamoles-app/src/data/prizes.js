@@ -197,9 +197,9 @@ const prizes = [
   },
   {
     id: 'ice-cream',
-    name: 'Ice Cream Sundae Party',
+    name: 'Ice Cream Sundae Party WITH DAD',
     cost: 80,
-    description: 'Build-your-own sundae night with toppings galore. Steal of the century!',
+    description: 'Build-your-own sundae night with toppings galore. Steal of the century! With DAD only.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ice_Cream_dessert_02.jpg/400px-Ice_Cream_dessert_02.jpg',
     link: null,
     saleHolidays: ['easter'],
