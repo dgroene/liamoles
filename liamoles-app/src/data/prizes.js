@@ -58,7 +58,7 @@ const prizes = [
   {
     id: 'lindt-truffles',
     name: '1 Bag of Lindt Truffles',
-    cost: 120,
+    cost: 65,
     description: 'Silky smooth Lindt Lindor truffles — melt-in-your-mouth chocolate bliss.',
     image: 'https://upload.wikimedia.org/wikipedia/commons/e/e4/Chocoladetruffels_Lindt.JPG',
     link: 'https://www.lindt.com',
@@ -68,7 +68,7 @@ const prizes = [
   {
     id: 'switch-game',
     name: 'Nintendo Switch Game',
-    cost: 650,
+    cost: 450,
     description: 'Any new Nintendo Switch title of your choice.',
     image: 'https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/store/software/switch2/70010000114614/9a5d800cc991652c1e051b844c11a86cf8b9bc061cdaf035ad44be1ea461e471',
     link: 'https://www.nintendo.com/us/store/games/nintendo-switch-games/',
