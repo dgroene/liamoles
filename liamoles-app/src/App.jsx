@@ -17,6 +17,11 @@ export default function App() {
   const [error, setError] = useState(null);
   const [confirming, setConfirming] = useState(null);   // prize being confirmed
   const [celebrating, setCelebrating] = useState(null); // prize being animated
+  const [luckyPrize] = useState(() =>
+    Math.random() < 1 / 500
+      ? prizes[Math.floor(Math.random() * prizes.length)]
+      : null
+  );
 
   const loadBalance = useCallback(async () => {
     try {
@@ -66,6 +71,9 @@ export default function App() {
   const todaysHoliday = getTodaysHoliday();
 
   function effectiveCost(prize) {
+    if (prize.id === luckyPrize?.id) {
+      return Math.round(prize.cost * 0.25);
+    }
     if (todaysHoliday && prize.saleHolidays?.includes(todaysHoliday.id)) {
       return Math.round(prize.cost * (1 - prize.salePercent / 100));
     }
@@ -99,6 +107,7 @@ export default function App() {
             balance={balance}
             onBuy={handleBuy}
             todaysHoliday={todaysHoliday}
+            luckyPrize={luckyPrize}
           />
         ))}
       </main>
